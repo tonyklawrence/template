@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project>
-  <import><javaresource name="build/shavenmaven.xml" classpath="build/shavenmaven.jar"/></import>
+<project basedir=".">
+  <import file="build/shavenmaven.xml"/>
 
   <target name="update-dependencies" description="Updates all dependent libraries">
     <update dependencies="build" directory="lib"/>
