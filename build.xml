@@ -2,6 +2,10 @@
 <project basedir=".">
   <import file="build/shavenmaven.xml"/>
 
+  <target name="clean" description="Removes all generated files">
+    <delete dir="lib"/>
+  </target>
+
   <target name="update-dependencies" description="Updates all dependent libraries">
     <update dependencies="build" directory="lib"/>
   </target>
