@@ -9,3 +9,5 @@
 
 Not sure why I need Funclate & StringTemplate.
 Would be nice to remove these and even add something like Moustache?
+
+[![Build Status](https://travis-ci.org/tonyklawrence/template.png?branch=master)](https://travis-ci.org/tonyklawrence/template)
