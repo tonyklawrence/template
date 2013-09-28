@@ -6,6 +6,11 @@
     <fileset dir="lib/runtime" includes="*.jar"/>
   </path>
 
+  <path id="lib.test">
+    <path refid="lib.runtime"/>
+    <fileset dir="lib/test" includes="*.jar"/>
+  </path>
+
   <target name="clean" description="Removes all generated files">
     <delete dir="build/classes"/>
     <delete dir="lib"/>
@@ -17,6 +22,15 @@
   </target>
 
   <target name="test" description="Run all tests" depends="compile"/>
+
+  <target name="run" description="Run the application" depends="compile">
+    <java classname="Main">
+      <classpath>
+        <pathelement path="build/classes/main"/>
+        <path refid="lib.test"/>
+      </classpath>
+    </java>
+  </target>
   
   <target name="update-dependencies" description="Updates all dependent libraries">
     <update dependencies="build" directory="lib"/>
