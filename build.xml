@@ -24,10 +24,10 @@
   <target name="test" description="Run all tests" depends="compile"/>
 
   <target name="run" description="Run the application" depends="compile">
-    <java classname="Main">
+    <java fork="true" classname="Main">
       <classpath>
         <pathelement path="build/classes/main"/>
-        <path refid="lib.test"/>
+        <path refid="lib.runtime"/>
       </classpath>
     </java>
   </target>
